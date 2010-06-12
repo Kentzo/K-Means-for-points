@@ -143,12 +143,12 @@ void CKMeansView::DrawKMean(const CPoint& kmean, CMemDC* pDC) {
 
 void CKMeansView::OnGenerate() {
 	CGenerateDialog dlg;
-	dlg.m_height = size.cx;
-	dlg.m_width = size.cy;
+	dlg.m_height = size.cy;
+	dlg.m_width = size.cx;
 	dlg.m_points = num_points;
 	dlg.m_clusters = num_clusters;
 	if (dlg.DoModal() == IDOK) {
-		CRect rect = CRect(0, 0, dlg.m_height, dlg.m_width);
+		CRect rect = CRect(0, 0, dlg.m_width, dlg.m_height);
 		size = rect.Size();
 		num_points = dlg.m_points;
 		num_clusters = dlg.m_clusters;
@@ -168,12 +168,12 @@ void CKMeansView::OnGenerateUpdate(CCmdUI* pCmdUI) {
 
 void CKMeansView::OnRun() {
 	CGenerateDialog dlg;
-	dlg.m_height = size.cx;
-	dlg.m_width = size.cy;
+	dlg.m_height = size.cy;
+	dlg.m_width = size.cx;
 	dlg.m_points = num_points;
 	dlg.m_clusters = num_clusters;
 	if (dlg.DoModal() == IDOK) {
-		CRect rect = CRect(0, 0, dlg.m_height, dlg.m_width);
+		CRect rect = CRect(0, 0, dlg.m_width, dlg.m_height);
 		size = rect.Size();
 		num_points = dlg.m_points;
 		num_clusters = dlg.m_clusters;
