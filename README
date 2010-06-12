@@ -1,0 +1,2 @@
+If you aren't interested in the interface implementation, then see KMeans/PointKMeanClusterizer.h and KMeans/PointKMeanClusterizer.cpp.
+The PointKMeanClusterizer class encapsulates all algorithm's methods.
